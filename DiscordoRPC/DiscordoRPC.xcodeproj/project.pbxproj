@@ -17,6 +17,10 @@
 		3B35B5EB2975B55C009C92E2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EA2975B55C009C92E2 /* ArgumentParser */; };
 		3B35B5ED2975B55C009C92E2 /* generate-manual in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EC2975B55C009C92E2 /* generate-manual */; };
 		3B35B5F12975B661009C92E2 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5F02975B661009C92E2 /* SwordRPC */; };
+		3B35B5F32975B6B1009C92E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F22975B6B1009C92E2 /* AppDelegate.swift */; };
+		3B35B5F62975B6F9009C92E2 /* Applescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F52975B6F9009C92E2 /* Applescript.swift */; };
+		3B35B5F82975B70B009C92E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F72975B70B009C92E2 /* Constants.swift */; };
+		3B35B5FA2975B71C009C92E2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F92975B71B009C92E2 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		3B35B5DA2975B057009C92E2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3B35B5DD2975B057009C92E2 /* DiscordoRPC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiscordoRPC.xcdatamodel; sourceTree = "<group>"; };
 		3B35B5DF2975B057009C92E2 /* DiscordoRPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiscordoRPC.entitlements; sourceTree = "<group>"; };
+		3B35B5F22975B6B1009C92E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B35B5F52975B6F9009C92E2 /* Applescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applescript.swift; sourceTree = "<group>"; };
+		3B35B5F72975B70B009C92E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3B35B5F92975B71B009C92E2 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +72,11 @@
 		3B35B5D02975B055009C92E2 /* DiscordoRPC */ = {
 			isa = PBXGroup;
 			children = (
-				3B35B5E52975B125009C92E2 /* CoreData */,
+				3B35B5F22975B6B1009C92E2 /* AppDelegate.swift */,
 				3B35B5D12975B055009C92E2 /* DiscordoRPCApp.swift */,
 				3B35B5D32975B055009C92E2 /* ContentView.swift */,
+				3B35B5E52975B125009C92E2 /* CoreData */,
+				3B35B5F42975B6EE009C92E2 /* Supporting Files */,
 				3B35B5D52975B057009C92E2 /* Assets.xcassets */,
 				3B35B5DF2975B057009C92E2 /* DiscordoRPC.entitlements */,
 				3B35B5D72975B057009C92E2 /* Preview Content */,
@@ -89,6 +99,16 @@
 				3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3B35B5F42975B6EE009C92E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B35B5F52975B6F9009C92E2 /* Applescript.swift */,
+				3B35B5F72975B70B009C92E2 /* Constants.swift */,
+				3B35B5F92975B71B009C92E2 /* Helpers.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +195,11 @@
 				3B35B5DE2975B057009C92E2 /* DiscordoRPC.xcdatamodeld in Sources */,
 				3B35B5DB2975B057009C92E2 /* Persistence.swift in Sources */,
 				3B35B5D42975B055009C92E2 /* ContentView.swift in Sources */,
+				3B35B5FA2975B71C009C92E2 /* Helpers.swift in Sources */,
+				3B35B5F32975B6B1009C92E2 /* AppDelegate.swift in Sources */,
+				3B35B5F82975B70B009C92E2 /* Constants.swift in Sources */,
 				3B35B5D22975B055009C92E2 /* DiscordoRPCApp.swift in Sources */,
+				3B35B5F62975B6F9009C92E2 /* Applescript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
