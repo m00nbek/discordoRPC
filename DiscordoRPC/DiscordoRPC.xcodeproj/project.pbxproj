@@ -56,12 +56,11 @@
 		3B35B5D02975B055009C92E2 /* DiscordoRPC */ = {
 			isa = PBXGroup;
 			children = (
+				3B35B5E52975B125009C92E2 /* CoreData */,
 				3B35B5D12975B055009C92E2 /* DiscordoRPCApp.swift */,
 				3B35B5D32975B055009C92E2 /* ContentView.swift */,
 				3B35B5D52975B057009C92E2 /* Assets.xcassets */,
-				3B35B5DA2975B057009C92E2 /* Persistence.swift */,
 				3B35B5DF2975B057009C92E2 /* DiscordoRPC.entitlements */,
-				3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */,
 				3B35B5D72975B057009C92E2 /* Preview Content */,
 			);
 			path = DiscordoRPC;
@@ -73,6 +72,15 @@
 				3B35B5D82975B057009C92E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B35B5E52975B125009C92E2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3B35B5DA2975B057009C92E2 /* Persistence.swift */,
+				3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
