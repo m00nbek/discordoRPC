@@ -13,6 +13,10 @@
 		3B35B5D92975B057009C92E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B35B5D82975B057009C92E2 /* Preview Assets.xcassets */; };
 		3B35B5DB2975B057009C92E2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5DA2975B057009C92E2 /* Persistence.swift */; };
 		3B35B5DE2975B057009C92E2 /* DiscordoRPC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */; };
+		3B35B5E82975B41E009C92E2 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5E72975B41E009C92E2 /* Socket */; };
+		3B35B5EB2975B55C009C92E2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EA2975B55C009C92E2 /* ArgumentParser */; };
+		3B35B5ED2975B55C009C92E2 /* generate-manual in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EC2975B55C009C92E2 /* generate-manual */; };
+		3B35B5F12975B661009C92E2 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5F02975B661009C92E2 /* SwordRPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B35B5F12975B661009C92E2 /* SwordRPC in Frameworks */,
+				3B35B5EB2975B55C009C92E2 /* ArgumentParser in Frameworks */,
+				3B35B5E82975B41E009C92E2 /* Socket in Frameworks */,
+				3B35B5ED2975B55C009C92E2 /* generate-manual in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,12 @@
 			dependencies = (
 			);
 			name = DiscordoRPC;
+			packageProductDependencies = (
+				3B35B5E72975B41E009C92E2 /* Socket */,
+				3B35B5EA2975B55C009C92E2 /* ArgumentParser */,
+				3B35B5EC2975B55C009C92E2 /* generate-manual */,
+				3B35B5F02975B661009C92E2 /* SwordRPC */,
+			);
 			productName = DiscordoRPC;
 			productReference = 3B35B5CE2975B055009C92E2 /* DiscordoRPC.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +141,11 @@
 				Base,
 			);
 			mainGroup = 3B35B5C52975B055009C92E2;
+			packageReferences = (
+				3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+			);
 			productRefGroup = 3B35B5CF2975B055009C92E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +371,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PKBeam/SwordRPC.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B35B5E72975B41E009C92E2 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+		3B35B5EA2975B55C009C92E2 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		3B35B5EC2975B55C009C92E2 /* generate-manual */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = "generate-manual";
+		};
+		3B35B5F02975B661009C92E2 /* SwordRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */;
+			productName = SwordRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */ = {
