@@ -1,2 +1,2 @@
-# discordoRPC
+# DiscordoRPC
 Discord RPC for Xcode
