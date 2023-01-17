@@ -10,7 +10,11 @@ import SwiftUI
 @main
 struct DiscordoRPCApp: App {
     let persistenceController = PersistenceController.shared
-
+    
+    init() {
+        UserDefaults.standard.register(defaults: ["strictMode": true, "flauntMode": false])
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

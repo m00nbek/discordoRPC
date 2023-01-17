@@ -13,14 +13,12 @@
 		3B35B5D92975B057009C92E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B35B5D82975B057009C92E2 /* Preview Assets.xcassets */; };
 		3B35B5DB2975B057009C92E2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5DA2975B057009C92E2 /* Persistence.swift */; };
 		3B35B5DE2975B057009C92E2 /* DiscordoRPC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5DC2975B057009C92E2 /* DiscordoRPC.xcdatamodeld */; };
-		3B35B5E82975B41E009C92E2 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5E72975B41E009C92E2 /* Socket */; };
-		3B35B5EB2975B55C009C92E2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EA2975B55C009C92E2 /* ArgumentParser */; };
-		3B35B5ED2975B55C009C92E2 /* generate-manual in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5EC2975B55C009C92E2 /* generate-manual */; };
-		3B35B5F12975B661009C92E2 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5F02975B661009C92E2 /* SwordRPC */; };
 		3B35B5F32975B6B1009C92E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F22975B6B1009C92E2 /* AppDelegate.swift */; };
 		3B35B5F62975B6F9009C92E2 /* Applescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F52975B6F9009C92E2 /* Applescript.swift */; };
 		3B35B5F82975B70B009C92E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F72975B70B009C92E2 /* Constants.swift */; };
 		3B35B5FA2975B71C009C92E2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35B5F92975B71B009C92E2 /* Helpers.swift */; };
+		3B35B5FF29767E7E009C92E2 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B5FE29767E7E009C92E2 /* SwordRPC */; };
+		3B35B60229768042009C92E2 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 3B35B60129768042009C92E2 /* Socket */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B35B5F12975B661009C92E2 /* SwordRPC in Frameworks */,
-				3B35B5EB2975B55C009C92E2 /* ArgumentParser in Frameworks */,
-				3B35B5E82975B41E009C92E2 /* Socket in Frameworks */,
-				3B35B5ED2975B55C009C92E2 /* generate-manual in Frameworks */,
+				3B35B5FF29767E7E009C92E2 /* SwordRPC in Frameworks */,
+				3B35B60229768042009C92E2 /* Socket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,10 +124,8 @@
 			);
 			name = DiscordoRPC;
 			packageProductDependencies = (
-				3B35B5E72975B41E009C92E2 /* Socket */,
-				3B35B5EA2975B55C009C92E2 /* ArgumentParser */,
-				3B35B5EC2975B55C009C92E2 /* generate-manual */,
-				3B35B5F02975B661009C92E2 /* SwordRPC */,
+				3B35B5FE29767E7E009C92E2 /* SwordRPC */,
+				3B35B60129768042009C92E2 /* Socket */,
 			);
 			productName = DiscordoRPC;
 			productReference = 3B35B5CE2975B055009C92E2 /* DiscordoRPC.app */;
@@ -162,9 +156,8 @@
 			);
 			mainGroup = 3B35B5C52975B055009C92E2;
 			packageReferences = (
-				3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */,
-				3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
-				3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+				3B35B5FD29767E7E009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+				3B35B60029768042009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */,
 			);
 			productRefGroup = 3B35B5CF2975B055009C92E2 /* Products */;
 			projectDirPath = "";
@@ -325,15 +318,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiscordoRPC/DiscordoRPC.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiscordoRPC/Preview Content\"";
-				DEVELOPMENT_TEAM = WCQRQ8RKJR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = DiscordoRPC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Blah blah";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -352,15 +351,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DiscordoRPC/DiscordoRPC.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DiscordoRPC/Preview Content\"";
-				DEVELOPMENT_TEAM = WCQRQ8RKJR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = DiscordoRPC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Blah blah";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -397,23 +402,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
+		3B35B5FD29767E7E009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/PKBeam/SwordRPC.git";
 			requirement = {
@@ -421,28 +410,26 @@
 				kind = branch;
 			};
 		};
+		3B35B60029768042009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B35B5E72975B41E009C92E2 /* Socket */ = {
+		3B35B5FE29767E7E009C92E2 /* SwordRPC */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3B35B5E62975B41E009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */;
-			productName = Socket;
-		};
-		3B35B5EA2975B55C009C92E2 /* ArgumentParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
-			productName = ArgumentParser;
-		};
-		3B35B5EC2975B55C009C92E2 /* generate-manual */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B35B5E92975B55C009C92E2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
-			productName = "generate-manual";
-		};
-		3B35B5F02975B661009C92E2 /* SwordRPC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3B35B5EF2975B661009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */;
+			package = 3B35B5FD29767E7E009C92E2 /* XCRemoteSwiftPackageReference "SwordRPC" */;
 			productName = SwordRPC;
+		};
+		3B35B60129768042009C92E2 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B35B60029768042009C92E2 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
 		};
 /* End XCSwiftPackageProductDependency section */
 

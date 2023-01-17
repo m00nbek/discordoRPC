@@ -21,7 +21,7 @@ var strictMode: Bool {
     set { UserDefaults.standard.set(newValue, forKey: "strictMode") }
 }
 
-// it will never stop the timer regardless of anything except if you kill DiscordX
+// it will never stop the timer regardless of anything except if you kill DiscordoRPC
 /// true: timer will not stop
 /// false: timer will stop
 var flauntMode: Bool {

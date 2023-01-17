@@ -140,23 +140,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             VStack {
                 VStack {
                     Spacer()
-                    Button("Start DiscordX") {
+                    Button("Start DiscordoRPC") {
                         if self.appDelegate.rpc == nil {
                             self.appDelegate.isRelaunch = true
                             self.appDelegate.launchApplication()
                         } else {
-                            print("DiscordX is already running")
+                            print("DiscordoRPC is already running")
                         }
                     }
                     Spacer()
-                    Button("Stop DiscordX") {
+                    Button("Stop DiscordoRPC") {
                         if let rpc = self.appDelegate.rpc {
                             rpc.setPresence(RichPresence())
                             rpc.disconnect()
                             self.appDelegate.rpc = nil
                             self.appDelegate.clearTimer()
                         } else {
-                            print("DiscordX is not running")
+                            print("DiscordoRPC is not running")
                         }
                     }
                     
@@ -170,7 +170,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     .pickerStyle(RadioGroupPickerStyle())
                     
                     Spacer()
-                    Button("Quit DiscordX") {
+                    Button("Quit DiscordoRPC") {
                         exit(-1)
                     }
                     .padding(.top)
@@ -249,7 +249,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         if !self.isRelaunch {
                             if let inactiveDate = self.inactiveDate {
                                 let newDate: Date? = self.startDate?.addingTimeInterval(-inactiveDate.timeIntervalSinceNow)
-//                                print(self.startDate, newDate)
 //                                print(self.startDate!.distance(to: newDate!))
                                 self.startDate = newDate
                             }
@@ -258,7 +257,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             self.inactiveDate = nil
                             self.isRelaunch = false
                         }
-                        // User can now start or stop DiscordX have to check if rpc is connected
+                        // User can now start or stop DiscordoRPC have to check if rpc is connected
                         if self.rpc != nil {
                             self.updateStatus()
                         }
@@ -335,17 +334,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension AppDelegate: SwordRPCDelegate {
     func swordRPCDidConnect(_ rpc: SwordRPC) {
-//        print("connected")
+        print("connected")
         startDate = Date()
         beginTimer()
     }
 
     func swordRPCDidDisconnect(_ rpc: SwordRPC, code: Int?, message msg: String?) {
-//        print("disconnected")
+        print("disconnected")
         clearTimer()
     }
 
     func swordRPCDidReceiveError(_ rpc: SwordRPC, code: Int, message msg: String) {
-    
+        print("Received Error: \(msg)")
     }
 }
